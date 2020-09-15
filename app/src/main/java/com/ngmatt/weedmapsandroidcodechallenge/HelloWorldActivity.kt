@@ -6,7 +6,7 @@ import android.os.Bundle
 /**
  * Created by Matt Ng on 9/14/20
  */
-class MainActivity: Activity() {
+class HelloWorldActivity: Activity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
