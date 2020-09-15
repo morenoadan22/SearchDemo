@@ -13,7 +13,7 @@ Hi there!  Thank you for taking the time to conduct the Weedmaps Android code ch
  - Glide
  - Constraint Layout
 
-## First Thing First
+## First Things First
 Register for and use the Yelp Fusion API [https://www.yelp.com/developers/documentation/v3](https://www.yelp.com/developers/documentation/v3)
 
 ## Requirements
