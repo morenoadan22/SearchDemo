@@ -29,7 +29,8 @@ Register and get a token for the Yelp Fusion API [https://www.yelp.com/developer
  4. Provide caching of the api requests which is invalidated after 15 days
 
 ## FAQ:
-  - What if I have any questions? Pretend your PM is on vacation, please use your best judgement and be able to speak as to why you made certain decisions.
+ - What if a link is broken above? Please reach out and we'll get those fixed. 
+ - What if I have any questions? Pretend your PM is on vacation, please use your best judgement and be able to speak as to why you made certain decisions.
  - Can I modify the designs? Yes, within reason. Stay as true to them as you can, and be prepared to explain any changes you make
  - Can I use other/additional libraries that aren't listed? Yes, just be ready to talk about them 
 
