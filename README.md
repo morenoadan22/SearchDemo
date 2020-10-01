@@ -44,4 +44,4 @@ Register and get a token for the Yelp Fusion API [https://www.yelp.com/developer
 
 ## Project Submission Instructions
 
-Please package your APK and send that along with a link to the project on Github.
+Please send a link to the repo where you complete this project. If the repo is private, please add dphart as an admin so I can add the appropriate reviewers. 
