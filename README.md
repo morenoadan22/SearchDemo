@@ -22,7 +22,7 @@ Register and get a token for the Yelp Fusion API [https://www.yelp.com/developer
  3. Each business item in the list should have: **name of the business**, **an image of the business**, and **the top review of the business(reference [here](https://www.yelp.com/developers/documentation/v3/business_reviews) for how to get the business review)**.
  4. Include Unit Tests for parts of your code with important functionality (no need to get 100% code coverage on the whole project).
 
-## Please do at least 2 of the following:
+## If you are applying or a senior role, please do at least 2 of the following:
  1. Requesting the user's location and sending that up in the request
  2. Save the list of a user's recent searchers and display those to the user as autocomplete suggestions
  3. Provide integration tests that verify the behavior established above
@@ -45,3 +45,4 @@ Register and get a token for the Yelp Fusion API [https://www.yelp.com/developer
 ## Project Submission Instructions
 
 Please send a link to the repo where you complete this project. If the repo is private, please add dphart as an admin so I can add the appropriate reviewers. 
+Let your recruiter know when it's completed and optionally zip up your work and send that to them as well. 
