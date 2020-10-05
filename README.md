@@ -48,5 +48,7 @@ Register and get a token for the Yelp Fusion API [https://www.yelp.com/developer
 
 ## Project Submission Instructions
 
-Please send a link to the repo where you complete this project. If the repo is private, please add dphart as an admin so I can add the appropriate reviewers. 
-Let your recruiter know when it's completed and optionally zip up your work and send that to them as well. 
+Please submit either of the following to the link from the email containing your coding HW:
+A) your completed .zip file 
+B) the link to a public repo with your completed project
+
