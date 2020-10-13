@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">WeedmapsAndroidCodeChallenge</string>
+    <string name="app_name">Search Demo</string>
+    <string name="api_url">https://api.yelp.com/v3/</string>
+    <string name="fusion_client_id">OIFVAqqn-xpmxCClCJTZGA</string>
+    <string name="fusion_api_key">Pjs7QPksPWdhViSVXLCowBQ6xA-1hr3nx5BOV2JfXpSKvplanq8m7fU95l8yLzRodLX7m5nyRmHwp8TqejOwEPvp_DBZ6YwLWPGfjzp0-5w2n373TIF-_w5KtaV_X3Yx</string>
+
+    <string name="latest_results_for">Showing results for %1$s</string>
+    <string name="showing_results_empty">Showing Latest Results</string>
+    <string name="search">Search</string>
 </resources>

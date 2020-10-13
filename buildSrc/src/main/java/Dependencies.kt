@@ -5,7 +5,7 @@
 object Versions {
     const val gradle = "4.0.1"
     const val kotlin = "1.4.10"
-    const val core_ktx = "1.3.1"
+    const val core_ktx = "1.3.2"
     const val kotlin_ext = "1.1.0"
     const val kotlin_coroutines = "1.3.9"
     const val app_compat = "1.2.0"
@@ -18,7 +18,13 @@ object Versions {
     const val koin = "2.1.6"
     const val retrofit = "2.4.0"
     const val moshi = "1.9.3"
+    const val logging_interceptor = "3.8.0"
     const val retrofit_moshi_converter = "2.8.1"
     const val glide = "4.11.0"
-    const val constraint_layout = "2.0.1"
+    const val constraint_layout = "2.0.2"
+    const val play_services = "17.1.0"
+    const val paging = "2.1.2"
+    const val live_data = "2.3.0-beta01"
+    const val card_view="1.0.0"
+    const val recycler_view = "1.1.0"
 }
