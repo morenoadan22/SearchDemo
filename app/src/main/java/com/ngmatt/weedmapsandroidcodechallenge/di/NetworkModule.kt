@@ -1,4 +1,4 @@
-package com.ngmatt.weedmapsandroidcodechallenge.koin
+package com.ngmatt.weedmapsandroidcodechallenge.di
 
 import android.content.Context
 import com.ngmatt.weedmapsandroidcodechallenge.R
@@ -14,7 +14,6 @@ import org.koin.android.ext.koin.androidContext
 import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
-import java.io.File
 
 val networkModule =  module {
     factory { provideMoshi() }
