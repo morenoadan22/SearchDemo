@@ -2,6 +2,7 @@ package com.ngmatt.weedmapsandroidcodechallenge
 
 import android.content.Context
 import android.location.Location
+import android.location.LocationProvider
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.Observer
 import com.google.android.gms.location.FusedLocationProviderClient
@@ -39,7 +40,7 @@ class LocationViewModelTest {
     private val mainThreadSurrogate = newSingleThreadContext("main thread")
 
     private lateinit var locationViewModel: LocationViewModel
-    private lateinit var mockLocationSource: LocationSource
+    private lateinit var mockLocationSource: LocationRepository
     private lateinit var mockLocationProviderClient: FusedLocationProviderClient
     private lateinit var mockLocation : Location
     private lateinit var mockObserver: Observer<Coordinate>
@@ -50,7 +51,7 @@ class LocationViewModelTest {
     fun setup() {
         Dispatchers.setMain(mainThreadSurrogate)
 
-        mockLocationSource = mock<LocationRepository> {
+        mockLocationSource = mock {
             onBlocking { getLastLocation() }
                 .thenAnswer { Coordinate(Date(), 33.9, 122.3) }
         }
@@ -70,9 +71,7 @@ class LocationViewModelTest {
             }
         }
 
-        val mockContext = mock<Context>{}
-
-        locationViewModel = LocationViewModel(mockContext, mockLocationSource)
+        locationViewModel = LocationViewModel(mockLocationProviderClient, mockLocationSource)
     }
 
 
