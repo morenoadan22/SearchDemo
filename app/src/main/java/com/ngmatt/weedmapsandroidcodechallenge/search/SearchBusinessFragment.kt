@@ -1,22 +1,15 @@
 package com.ngmatt.weedmapsandroidcodechallenge.search
 
-import android.Manifest
-import android.annotation.SuppressLint
-import android.content.pm.PackageManager
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.appcompat.widget.SearchView
-import androidx.core.app.ActivityCompat
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.gms.location.FusedLocationProviderClient
-import com.google.android.gms.location.LocationServices
 import com.ngmatt.weedmapsandroidcodechallenge.R
 import com.ngmatt.weedmapsandroidcodechallenge.databinding.FragmentSearchBinding
 import com.ngmatt.weedmapsandroidcodechallenge.utils.hideKeyboard
