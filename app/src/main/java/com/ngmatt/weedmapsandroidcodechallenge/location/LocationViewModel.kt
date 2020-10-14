@@ -24,15 +24,17 @@ class LocationViewModel(
         try {
             locationClient.lastLocation.addOnSuccessListener {
                 GlobalScope.launch {
-                    locationRepository.addLocation(
-                        Coordinate(Date(), it.latitude, it.longitude)
-                    )
-                    coordinateLiveData.postValue(locationRepository.getLastLocation())
+                    if(it != null) {
+                        locationRepository.addLocation(
+                            Coordinate(Date(), it.latitude, it.longitude)
+                        )
+                        coordinateLiveData.postValue(locationRepository.getLastLocation())
+                    }
                 }
             }
             coordinateLiveData.postValue(locationRepository.getLastLocation())
         } catch (se: SecurityException) {
-
+            // ignore for demo purposes
         }
     }
 
