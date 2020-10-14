@@ -1,10 +1,7 @@
 package com.ngmatt.weedmapsandroidcodechallenge
 
 import android.app.Application
-import com.ngmatt.weedmapsandroidcodechallenge.di.fragmentModule
-import com.ngmatt.weedmapsandroidcodechallenge.di.networkModule
-import com.ngmatt.weedmapsandroidcodechallenge.di.repositoryModule
-import com.ngmatt.weedmapsandroidcodechallenge.di.viewModelModule
+import com.ngmatt.weedmapsandroidcodechallenge.di.*
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
@@ -16,6 +13,7 @@ class SearchDemoApplication: Application() {
             androidContext(this@SearchDemoApplication)
             modules(listOf(
                 networkModule,
+                databaseModule,
                 repositoryModule,
                 viewModelModule,
                 fragmentModule

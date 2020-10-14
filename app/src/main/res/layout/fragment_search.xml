@@ -46,6 +46,15 @@
             app:layout_constraintTop_toBottomOf="@id/txtSearchLabel"
             app:layout_constraintBottom_toBottomOf="parent" />
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listSuggestions"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@id/containerSearch"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

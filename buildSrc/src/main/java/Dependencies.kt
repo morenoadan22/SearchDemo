@@ -24,6 +24,7 @@ object Versions {
     const val constraint_layout = "2.0.2"
     const val play_services = "17.1.0"
     const val paging = "2.1.2"
+    const val room_version = "2.2.5"
     const val live_data = "2.3.0-beta01"
     const val card_view="1.0.0"
     const val recycler_view = "1.1.0"

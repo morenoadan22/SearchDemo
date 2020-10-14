@@ -1,29 +1,36 @@
 package com.ngmatt.weedmapsandroidcodechallenge.search
 
-import android.location.Location
-import android.util.Log
 import androidx.lifecycle.*
 import androidx.paging.DataSource
 import androidx.paging.LivePagedListBuilder
 import androidx.paging.PagedList
 import com.ngmatt.weedmapsandroidcodechallenge.data.model.Business
-import com.ngmatt.weedmapsandroidcodechallenge.data.model.Coordinate
+import com.ngmatt.weedmapsandroidcodechallenge.location.LocationRepository
+import com.ngmatt.weedmapsandroidcodechallenge.search.infrastructure.BusinessRepository
+import com.ngmatt.weedmapsandroidcodechallenge.search.infrastructure.SearchDataSource
+import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.GlobalScope
 
-
 class SearchViewModel(
-    private val repository: BusinessRepository
+    private val repository: BusinessRepository,
+    private val locationRepository: LocationRepository
 ) : ViewModel() {
 
     val searchPagedListLiveData = initializeSearchListLiveData()
     private var searchDataSource: SearchDataSource? = null
 
     val searchTerm = MutableLiveData<String>()
-    private val coordinate = MutableLiveData<Coordinate>()
 
-    fun setUserLocation(location: Location?) = location?.let {
-        Log.d("Adan", "New Location detected $location")
-        coordinate.postValue(Coordinate(it.latitude, it.longitude))
+    val suggestionsLiveData = searchTerm.switchMap {
+        liveData {
+            emit(repository.recentSearchTerms(it))
+        }
+    }
+
+    val errorLiveData = MutableLiveData<Throwable>()
+
+    private val exceptionHandler = CoroutineExceptionHandler { _, throwable ->
+        errorLiveData.postValue(throwable)
     }
 
     fun searchBusiness(term: String) {
@@ -42,9 +49,10 @@ class SearchViewModel(
             override fun create(): SearchDataSource {
                 return SearchDataSource(
                     repository = repository,
-                    coordinate = coordinate,
+                    location = locationRepository,
                     currentQuery = searchTerm.value.orEmpty(),
-                    scope = GlobalScope
+                    scope = GlobalScope,
+                    exceptionHandler = exceptionHandler
                 ).also {
                     searchDataSource = it
                 }

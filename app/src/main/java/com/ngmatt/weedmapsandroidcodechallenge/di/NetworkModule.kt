@@ -1,6 +1,7 @@
 package com.ngmatt.weedmapsandroidcodechallenge.di
 
 import android.content.Context
+import com.ngmatt.weedmapsandroidcodechallenge.BuildConfig
 import com.ngmatt.weedmapsandroidcodechallenge.R
 import com.ngmatt.weedmapsandroidcodechallenge.data.FusionApi
 import com.squareup.moshi.Moshi
@@ -50,7 +51,13 @@ fun provideOkHttpClient(fusionApiInterceptor: FusionApiInterceptor, cacheInterce
         .cache(cache)
         .addNetworkInterceptor(cacheInterceptor)
         .addInterceptor(fusionApiInterceptor)
-        .addInterceptor(HttpLoggingInterceptor().apply { level = HttpLoggingInterceptor.Level.BODY })
+        .addInterceptor(HttpLoggingInterceptor().apply {
+                level = if(BuildConfig.DEBUG)
+                    HttpLoggingInterceptor.Level.BODY
+                else
+                    HttpLoggingInterceptor.Level.NONE
+            }
+        )
         .build()
 }
 
