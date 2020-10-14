@@ -1,14 +1,9 @@
 package com.ngmatt.weedmapsandroidcodechallenge.location
 
-import android.content.Context
-import android.location.Location
-import android.location.LocationProvider
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.google.android.gms.location.FusedLocationProviderClient
-import com.google.android.gms.location.LocationServices
 import com.ngmatt.weedmapsandroidcodechallenge.location.infrastructure.LocationRepository
-import com.ngmatt.weedmapsandroidcodechallenge.location.infrastructure.LocationSource
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import java.util.*

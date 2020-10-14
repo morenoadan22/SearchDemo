@@ -1,6 +1,5 @@
 package com.ngmatt.weedmapsandroidcodechallenge.data
 
-import com.ngmatt.weedmapsandroidcodechallenge.data.model.Review
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query

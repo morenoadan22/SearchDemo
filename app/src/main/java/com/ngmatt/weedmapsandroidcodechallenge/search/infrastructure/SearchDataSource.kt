@@ -3,7 +3,6 @@ package com.ngmatt.weedmapsandroidcodechallenge.search.infrastructure
 import androidx.paging.PositionalDataSource
 import com.ngmatt.weedmapsandroidcodechallenge.data.model.Business
 import com.ngmatt.weedmapsandroidcodechallenge.location.Coordinate
-import com.ngmatt.weedmapsandroidcodechallenge.location.infrastructure.LocationRepository
 import com.ngmatt.weedmapsandroidcodechallenge.location.infrastructure.LocationSource
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.CoroutineScope

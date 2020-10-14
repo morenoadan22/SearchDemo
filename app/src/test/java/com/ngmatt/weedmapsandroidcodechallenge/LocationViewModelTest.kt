@@ -1,8 +1,6 @@
 package com.ngmatt.weedmapsandroidcodechallenge
 
-import android.content.Context
 import android.location.Location
-import android.location.LocationProvider
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.Observer
 import com.google.android.gms.location.FusedLocationProviderClient
@@ -10,7 +8,6 @@ import com.google.android.gms.tasks.OnSuccessListener
 import com.ngmatt.weedmapsandroidcodechallenge.location.Coordinate
 import com.ngmatt.weedmapsandroidcodechallenge.location.LocationViewModel
 import com.ngmatt.weedmapsandroidcodechallenge.location.infrastructure.LocationRepository
-import com.ngmatt.weedmapsandroidcodechallenge.location.infrastructure.LocationSource
 import com.nhaarman.mockitokotlin2.doAnswer
 import com.nhaarman.mockitokotlin2.doReturn
 import com.nhaarman.mockitokotlin2.mock
