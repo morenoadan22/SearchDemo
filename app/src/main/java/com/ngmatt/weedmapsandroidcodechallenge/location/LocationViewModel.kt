@@ -15,7 +15,7 @@ import java.util.*
 
 class LocationViewModel(
     private val locationClient: FusedLocationProviderClient,
-    private val locationRepository: LocationSource
+    private val locationRepository: LocationRepository
 ): ViewModel() {
 
     val coordinateLiveData = MutableLiveData<Coordinate>()
@@ -27,9 +27,7 @@ class LocationViewModel(
             locationClient.lastLocation.addOnSuccessListener {
                 GlobalScope.launch {
                     if(it != null) {
-                        locationRepository.addLocation(
-                            Coordinate(Date(), it.latitude, it.longitude)
-                        )
+                        locationRepository.addLocation(Coordinate(Date(), it.latitude, it.longitude))
                         coordinateLiveData.postValue(locationRepository.getLastLocation())
                     }
                 }

@@ -1,5 +1,6 @@
 package com.ngmatt.weedmapsandroidcodechallenge
 
+import android.content.Context
 import android.location.Location
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.Observer
@@ -69,7 +70,9 @@ class LocationViewModelTest {
             }
         }
 
-        locationViewModel = LocationViewModel(mockLocationProviderClient, mockLocationSource)
+        val mockContext = mock<Context>{}
+
+        locationViewModel = LocationViewModel(mockContext, mockLocationSource)
     }
 
 

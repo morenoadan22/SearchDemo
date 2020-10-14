@@ -17,12 +17,10 @@ val repositoryModule = module {
     }
     factory { provideLocationProvider(androidContext()) }
     factory {
-        LocationRepository(
-            get()
-        )
+        LocationRepository(get())
     }
 }
 
-fun provideLocationProvider(context: Context) : FusedLocationProviderClient {
-    return LocationServices.getFusedLocationProviderClient(context)
+fun provideLocationProvider(context: Context): FusedLocationProviderClient {
+    return  LocationServices.getFusedLocationProviderClient(context)
 }
