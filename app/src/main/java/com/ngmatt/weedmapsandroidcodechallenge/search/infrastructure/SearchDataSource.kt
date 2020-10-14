@@ -1,10 +1,10 @@
 package com.ngmatt.weedmapsandroidcodechallenge.search.infrastructure
 
-import androidx.lifecycle.LiveData
 import androidx.paging.PositionalDataSource
 import com.ngmatt.weedmapsandroidcodechallenge.data.model.Business
 import com.ngmatt.weedmapsandroidcodechallenge.location.Coordinate
-import com.ngmatt.weedmapsandroidcodechallenge.location.LocationRepository
+import com.ngmatt.weedmapsandroidcodechallenge.location.infrastructure.LocationRepository
+import com.ngmatt.weedmapsandroidcodechallenge.location.infrastructure.LocationSource
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
@@ -12,8 +12,8 @@ import java.util.*
 
 class SearchDataSource(
     private val currentQuery: String,
-    private val location: LocationRepository,
-    private val repository: BusinessRepository,
+    private val location: LocationSource,
+    private val repository: BusinessSource,
     private val scope: CoroutineScope,
     private val exceptionHandler: CoroutineExceptionHandler
 ): PositionalDataSource<Business>() {

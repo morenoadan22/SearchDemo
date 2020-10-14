@@ -28,4 +28,5 @@ object Versions {
     const val live_data = "2.3.0-beta01"
     const val card_view="1.0.0"
     const val recycler_view = "1.1.0"
+    const val mock_web_server = "4.9.0"
 }

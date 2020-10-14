@@ -6,6 +6,6 @@ import org.koin.android.ext.koin.androidContext
 import org.koin.dsl.module
 
 val viewModelModule = module {
-    factory { LocationViewModel(androidContext(), get()) }
+    factory { LocationViewModel(get(), get()) }
     factory { SearchViewModel(get(), get()) }
 }

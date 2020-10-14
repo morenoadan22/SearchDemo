@@ -2,7 +2,7 @@ package com.ngmatt.weedmapsandroidcodechallenge.di
 
 import android.app.Application
 import androidx.room.Room
-import com.ngmatt.weedmapsandroidcodechallenge.location.LocationDao
+import com.ngmatt.weedmapsandroidcodechallenge.location.infrastructure.LocationDao
 import com.ngmatt.weedmapsandroidcodechallenge.storage.BusinessDatabase
 import com.ngmatt.weedmapsandroidcodechallenge.search.infrastructure.SearchDao
 import org.koin.android.ext.koin.androidApplication

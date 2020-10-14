@@ -1,9 +1,9 @@
-package com.ngmatt.weedmapsandroidcodechallenge.location
+package com.ngmatt.weedmapsandroidcodechallenge.location.infrastructure
 
 import androidx.room.Dao
 import androidx.room.Insert
-import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import com.ngmatt.weedmapsandroidcodechallenge.location.Coordinate
 
 @Dao
 interface LocationDao {

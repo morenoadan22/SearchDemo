@@ -62,10 +62,13 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.live_data}"
     implementation "androidx.cardview:cardview:${Versions.card_view}"
     implementation "androidx.recyclerview:recyclerview:${Versions.recycler_view}"
+
     testImplementation "junit:junit:${Versions.junit}"
+    testImplementation  "androidx.arch.core:core-testing:2.1.0"
     testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:${Versions.mockito_kotlin}"
     testImplementation "org.mockito:mockito-inline:${Versions.mockito_inline}"
     testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.kotlin_coroutines}"
+
     androidTestImplementation "androidx.test.ext:junit:${Versions.android_junit}"
     androidTestImplementation "androidx.test.espresso:espresso-core:${Versions.espresso}"
 

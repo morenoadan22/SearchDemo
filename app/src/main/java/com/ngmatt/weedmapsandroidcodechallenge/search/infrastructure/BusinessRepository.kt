@@ -8,10 +8,10 @@ import java.util.*
 class BusinessRepository(
     private val fusionApi: FusionApi,
     private val searchDao: SearchDao,
-) {
-    suspend fun recentSearchTerms(query: String) = searchDao.findSuggestions("%$query%")
-    suspend fun search(term: String, location: String) = fusionApi.searchBusinesses(term, location)
-    suspend fun search(term: String, latitude: String, longitude: String, offset: Int = 0, limit: Int = 10): BusinessResponse {
+) : BusinessSource {
+    override suspend fun recentSearchTerms(query: String) = searchDao.findSuggestions("%$query%")
+    override suspend fun search(term: String, location: String) = fusionApi.searchBusinesses(term, location)
+    override suspend fun search(term: String, latitude: String, longitude: String, offset: Int, limit: Int): BusinessResponse {
             val businessResponse = fusionApi.searchBusinesses(
                 term,
                 latitude,

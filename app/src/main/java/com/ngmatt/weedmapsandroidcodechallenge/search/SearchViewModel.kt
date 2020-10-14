@@ -5,15 +5,15 @@ import androidx.paging.DataSource
 import androidx.paging.LivePagedListBuilder
 import androidx.paging.PagedList
 import com.ngmatt.weedmapsandroidcodechallenge.data.model.Business
-import com.ngmatt.weedmapsandroidcodechallenge.location.LocationRepository
-import com.ngmatt.weedmapsandroidcodechallenge.search.infrastructure.BusinessRepository
+import com.ngmatt.weedmapsandroidcodechallenge.location.infrastructure.LocationSource
+import com.ngmatt.weedmapsandroidcodechallenge.search.infrastructure.BusinessSource
 import com.ngmatt.weedmapsandroidcodechallenge.search.infrastructure.SearchDataSource
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.GlobalScope
 
 class SearchViewModel(
-    private val repository: BusinessRepository,
-    private val locationRepository: LocationRepository
+    private val repository: BusinessSource,
+    private val locationRepository: LocationSource
 ) : ViewModel() {
 
     val searchPagedListLiveData = initializeSearchListLiveData()
